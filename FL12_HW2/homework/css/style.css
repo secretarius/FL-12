@@ -1,0 +1,43 @@
+/*
+
+write your code here
+
+*/
+
+.flex-2-col {
+  display: flex;
+  text-align: center;
+  text-indent: 10px;
+}
+
+.tm-banner-text {
+  text-shadow: 2px 2px 4px #333;
+}
+
+@media print {
+        
+}
+
+
+/* 
+.tm-content-box ol li:nth-child(even) {
+    margin-left: 150px;
+    text-align: left;
+} */
+
+section.heading h2 {
+  color: lightskyblue;
+  text-align: center;
+}
+
+li .tm-nav-item-link:hover {
+  background: lightskyblue;
+  color: #fff;
+}
+
+.text::after {
+  content: "New";
+  color: red;
+  vertical-align: top;
+  font-size: 11px;
+}
