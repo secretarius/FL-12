@@ -1,43 +1,76 @@
-/*
+li .tm-nav-item-link:hover {
+    background: lightskyblue;
+    color: #fff;
+}
 
-write your code here
-
-*/
-
-.flex-2-col {
-  display: flex;
-  text-align: center;
-  text-indent: 10px;
+.tm-banner-inner {
+  border: 25px solid;
+  border-image: linear-gradient(45deg, lightskyblue, burlywood) 1;
 }
 
 .tm-banner-text {
-  text-shadow: 2px 2px 4px #333;
+  text-shadow: 5px 5px 3px #333;
+  animation-duration: 5s;
+  animation-name: bannertext;
+  position: relative;
 }
 
-@media print {
-        
+@keyframes bannertext {
+  from {
+    left: 200px;
+  }
+  to {
+    left: 0px;
+  }
 }
 
+.flex-2-col {
+  display: flex;
+  align-items: center;
+}
 
-/* 
-.tm-content-box ol li:nth-child(even) {
-    margin-left: 150px;
-    text-align: left;
-} */
+.tm-section-title {
+  text-align: center;
+}
+
+.tm-section-description {
+  text-indent: 25px;
+}
 
 section.heading h2 {
   color: lightskyblue;
   text-align: center;
 }
 
-li .tm-nav-item-link:hover {
-  background: lightskyblue;
-  color: #fff;
+.heading li a:hover::before {
+    content: ">";
 }
 
 .text::after {
   content: "New";
   color: red;
   vertical-align: top;
-  font-size: 11px;
+  font-size: 10px;
+}
+
+.heading ol {
+    list-style: lower-alpha;
+}
+/* 
+.heading.tm-content-box ol {
+  counter-reset: list;
+}
+ol > li {
+  list-style: none;
+}
+ol > li:before {
+  content: counter(list, lower-alpha) ". ";
+  counter-increment: list;
+} */
+
+#contact textarea {
+  border: 1px solid lightskyblue;
+  background: url("../img/email-icon.png") no-repeat bottom 10px right 10px;
+  resize: none;
+  background-size: 32px;
 }
