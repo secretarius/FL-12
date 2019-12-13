@@ -1,17 +1,18 @@
 // Write your styles here
 * {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 @mixin buttons {
   float: left;
-    border: none;
-    color: lightskyblue;
-    background-color: green;
-    border-radius: 3px;
-    
-    padding: 15px 25px;  
+  border: none;
+  color: white;
+  background-color: green;
+  border-radius: 3px;
+  width: 150px;
+  height: 50px;
+  padding: 15px 25px;
 }
 
 @mixin links {
@@ -26,10 +27,10 @@
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom-right-radius: 40%;
+  border-bottom-right-radius: 50em 25em;
   width: 1920px;
-  height: 720px;
-  color: #2c2f3c
+  height: 655px;
+  color: #21232e;
 }
 
 // div .section_card_img {
@@ -49,34 +50,122 @@ body {
     @include buttons;
   }
 
-  padding: 20px 0px 0px 120px;
-  width: 600px;
+  padding: 20px 0px 0px 150px;
+  width: 630px;
 }
 
 .landing-logo {
-    display: flex;
+  display: flex;
 
-    img {
-        height: 50px;
-        width: 50px;
-    }
+  img {
+    height: 50px;
+    width: 50px;
+  }
 
-    p {
-        font-size: 25px;
-        font-weight: bold;
-        padding: 0px 0px 0px 20px;
-    }
+  p {
+    font-family: "Hind", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 0 0 15px;
+  }
 
-    span {
-        display: block;
-        font-size: 10px;
-        text-align: center;
-    }
+  span {
+    display: block;
+    font-size: 10px;
+    text-align: center;
+  }
 }
 
 .header_heading {
-    font-size: 80px;
-    line-height: 1;
-    font-weight: bold;
-    padding-top: 85px;
+  font-size: 80px;
+  line-height: 1;
+  font-weight: bold;
+  padding: 85px 0 0 0;
+}
+
+.header_text {
+  padding: 45px 0 68px 0;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.header_heading p {
+  position: relative;
+}
+
+.header_heading:before {
+  content: "awesome";
+  background-color: #30d5c8;
+  color: black;
+  position: absolute;
+  top: 234px;
+  left: 150px;
+  line-height: 1em;
+}
+
+.section_text {
+  font-weight: bold;
+  font-size: 50px;
+  color: #21232e;
+  padding: 50px 0 0 0;
+  text-align: center;
+}
+
+.section_text p {
+  position: relative;
+}
+
+.section_text:before {
+  content: "adventure";
+  background-color: #30d5c8;
+  color: black;
+  position: absolute;
+  top: 711px;
+  left: 970px;
+  line-height: 1em;
+}
+
+.section_card {
+  display: flex;
+  background-color: #21232e;
+  margin: 20px auto;
+  width: 1110px;
+  height: 330px;
+  border-radius: 5px;
+}
+
+img {
+  width: 430px;
+  height: 280px;
+  margin-left: 20px;
+  align-self: center;
+  border-radius: 5px;
+}
+
+.section_card_right_container {
+  width: 500px;
+  padding: 0 90px 0 90px;
+}
+
+.section_card_heading {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 65px 0 0 0;
+  text-align: center;
+}
+
+.section_card_text {
+  color: white;
+  white-space: normal;
+  padding-top: 40px; 
+  line-height: 1.5;
+}
+
+.section_link {
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+  padding: 40px 0 0 0;
 }
