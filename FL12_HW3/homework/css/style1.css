@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif; }
+
 .header {
   background-image: url(/homework/img/m-h-day.jpg);
   background-attachment: fixed;
@@ -6,7 +10,8 @@
   background-size: cover;
   border-bottom-right-radius: 40%;
   width: 1920px;
-  height: 720px; }
+  height: 720px;
+  color: #2c2f3c; }
 
 body {
   width: 1920px; }
@@ -19,10 +24,11 @@ body {
     padding-left: 150px;
     font-weight: bold; }
   .header-wrap .header_button {
-    float: right;
-    border: 1px solid lightskyblue;
+    float: left;
+    border: none;
     color: lightskyblue;
-    background-color: #fff;
+    background-color: green;
+    border-radius: 3px;
     padding: 15px 25px; }
 
 .landing-logo {
@@ -42,6 +48,7 @@ body {
 .header_heading {
   font-size: 80px;
   line-height: 1;
-  font-weight: bold; }
+  font-weight: bold;
+  padding-top: 85px; }
 
 /*# sourceMappingURL=style1.css.map */

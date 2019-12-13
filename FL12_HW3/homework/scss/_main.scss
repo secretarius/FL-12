@@ -1,4 +1,24 @@
 // Write your styles here
+* {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@mixin buttons {
+  float: left;
+    border: none;
+    color: lightskyblue;
+    background-color: green;
+    border-radius: 3px;
+    
+    padding: 15px 25px;  
+}
+
+@mixin links {
+  color: white;
+  padding-left: 150px;
+  font-weight: bold;
+}
 
 .header {
   background-image: url(/homework/img/m-h-day.jpg);
@@ -9,6 +29,7 @@
   border-bottom-right-radius: 40%;
   width: 1920px;
   height: 720px;
+  color: #2c2f3c
 }
 
 // div .section_card_img {
@@ -21,17 +42,11 @@ body {
 
 .header-wrap {
   a {
-    color: white;
-    padding-left: 150px;
-    font-weight: bold;
+    @include links;
   }
 
   .header_button {
-    float: right;
-    border: 1px solid lightskyblue;
-    color: lightskyblue;
-    background-color: #fff;
-    padding: 15px 25px;
+    @include buttons;
   }
 
   padding: 20px 0px 0px 120px;
@@ -63,5 +78,5 @@ body {
     font-size: 80px;
     line-height: 1;
     font-weight: bold;
-    // padding-top: 85px;
+    padding-top: 85px;
 }
