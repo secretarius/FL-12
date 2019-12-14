@@ -6,6 +6,7 @@
 
 body {
   width: $widthPage;
+  background-color: $bGColor;
 }
 
 @mixin buttons {
@@ -46,7 +47,6 @@ $map: (
   border-bottom-right-radius: 50em 25em;
   width: $widthPage;
   height: 655px;
-  color: #21232e;
 }
 
 // div .section_card_img {
@@ -71,6 +71,7 @@ $map: (
 .landing-logo {
   display: flex;
   align-items: center;
+  color: $headerHeadingColor;
 
   img {
     height: 50px;
@@ -96,12 +97,14 @@ $map: (
   line-height: 1;
   font-weight: bold;
   padding: 85px 0 0 0;
+  color: $headerHeadingColor;
 }
 
 .header_text {
   padding: 45px 0 68px 0;
   line-height: 1.5;
   white-space: pre-line;
+  color: $headerHeadingColor;
 }
 
 .header_heading p {
@@ -111,7 +114,7 @@ $map: (
 .header_heading:before {
   content: map-get($map, awesome);
   background-color: $bgColorBefore;
-  color: black;
+  color: $colorBefore;
   position: absolute;
   top: 234px;
   left: 150px;
@@ -121,7 +124,7 @@ $map: (
 .section_text {
   font-weight: bold;
   font-size: 50px;
-  color: #21232e;
+  color: $colorSectionText;
   padding: 50px 0 0 0;
   text-align: center;
 }
@@ -133,7 +136,7 @@ $map: (
 .section_text:before {
   content: map-get($map, adventure);
   background-color: $bgColorBefore;
-  color: black;
+  color: $colorBefore;
   position: absolute;
   top: 711px;
   left: 970px;
@@ -142,7 +145,7 @@ $map: (
 
 .section_card {
   display: flex;
-  background-color: #21232e;
+  background-color: $sectionCardColor;
   margin: 20px auto;
   width: 1110px;
   height: 330px;
@@ -201,6 +204,7 @@ img {
 .section_banner_heading {
   font-size: 30px;
   font-weight: bold;
+  color: $headerHeadingColor;
 }
 
 .section_banner_text {
@@ -215,7 +219,7 @@ img {
 .section_banner_heading:before {
   content: map-get($map, start);
   background-color: $bgColorBefore;
-  color: black;
+  color: $colorBefore;
   position: absolute;
   top: 24px;
   left: 282px;
@@ -230,16 +234,21 @@ img {
 
 .footer-wrap {
   font-family: $fontFamilyHind;
-  background-color: #21232e;
+  background-color: $footerBgColor;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: $widthPage;
   height: 240px;
   color: white;
+  padding-top: 35px;
 }
 
 .footer_logo {
   @extend .landing-logo;
   color: white;
+}
+
+.footer_text {
+  width: 350px;
 }

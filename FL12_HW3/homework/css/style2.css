@@ -4,7 +4,8 @@
   font-family: "Source Sans Pro", sans-serif; }
 
 body {
-  width: 1920px; }
+  width: 1920px;
+  background-color: #21232e; }
 
 .header {
   background-image: url(/homework/img/m-h-night.jpg);
@@ -14,8 +15,7 @@ body {
   background-size: cover;
   border-bottom-right-radius: 50em 25em;
   width: 1920px;
-  height: 655px;
-  color: #21232e; }
+  height: 655px; }
 
 .header-wrap {
   padding: 20px 0px 0px 150px;
@@ -36,7 +36,8 @@ body {
 
 .landing-logo, .footer_logo {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  color: white; }
   .landing-logo img, .footer_logo img {
     height: 50px;
     width: 50px; }
@@ -54,12 +55,14 @@ body {
   font-size: 80px;
   line-height: 1;
   font-weight: bold;
-  padding: 85px 0 0 0; }
+  padding: 85px 0 0 0;
+  color: white; }
 
 .header_text {
   padding: 45px 0 68px 0;
   line-height: 1.5;
-  white-space: pre-line; }
+  white-space: pre-line;
+  color: white; }
 
 .header_heading p {
   position: relative; }
@@ -67,7 +70,7 @@ body {
 .header_heading:before {
   content: "awesome";
   background-color: #FF4E33;
-  color: black;
+  color: white;
   position: absolute;
   top: 234px;
   left: 150px;
@@ -76,7 +79,7 @@ body {
 .section_text {
   font-weight: bold;
   font-size: 50px;
-  color: #21232e;
+  color: white;
   padding: 50px 0 0 0;
   text-align: center; }
 
@@ -86,7 +89,7 @@ body {
 .section_text:before {
   content: "adventure";
   background-color: #FF4E33;
-  color: black;
+  color: white;
   position: absolute;
   top: 711px;
   left: 970px;
@@ -94,7 +97,7 @@ body {
 
 .section_card {
   display: flex;
-  background-color: #21232e;
+  background-color: #3b3f50;
   margin: 20px auto;
   width: 1110px;
   height: 330px;
@@ -148,7 +151,8 @@ img {
 
 .section_banner_heading {
   font-size: 30px;
-  font-weight: bold; }
+  font-weight: bold;
+  color: white; }
 
 .section_banner_text {
   padding-top: 15px;
@@ -160,7 +164,7 @@ img {
 .section_banner_heading:before {
   content: "start";
   background-color: #FF4E33;
-  color: black;
+  color: white;
   position: absolute;
   top: 24px;
   left: 282px;
@@ -178,15 +182,19 @@ img {
 
 .footer-wrap {
   font-family: "Hind", sans-serif;
-  background-color: #21232e;
+  background-color: #3b3f50;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 1920px;
   height: 240px;
-  color: white; }
+  color: white;
+  padding-top: 35px; }
 
 .footer_logo {
   color: white; }
+
+.footer_text {
+  width: 350px; }
 
 /*# sourceMappingURL=style2.css.map */
