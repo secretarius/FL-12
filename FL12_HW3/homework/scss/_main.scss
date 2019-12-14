@@ -4,11 +4,6 @@
   font-family: $fontFamilySans;
 }
 
-body {
-  width: $widthPage;
-  background-color: $bGColor;
-}
-
 @mixin buttons {
   border: none;
   color: white;
@@ -33,10 +28,39 @@ body {
 }
 
 $map: (
-    awesome: 'awesome',
-    adventure: 'adventure',
-    start: 'start'
+  awesome: "awesome",
+  adventure: "adventure",
+  start: "start"
 );
+
+.landing-logo {
+  display: flex;
+  align-items: center;
+  color: $headerHeadingColor;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+
+  p {
+    font-family: $fontFamilyHind;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 0 0 15px;
+  }
+
+  span {
+    display: block;
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+body {
+  width: $widthPage;
+  background-color: $bGColor;
+}
 
 .header {
   background-image: $header-img;
@@ -68,30 +92,6 @@ $map: (
   width: 630px;
 }
 
-.landing-logo {
-  display: flex;
-  align-items: center;
-  color: $headerHeadingColor;
-
-  img {
-    height: 50px;
-    width: 50px;
-  }
-
-  p {
-    font-family: $fontFamilyHind;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 0 0 0 15px;
-  }
-
-  span {
-    display: block;
-    font-size: 10px;
-    text-align: center;
-  }
-}
-
 .header_heading {
   font-size: 80px;
   line-height: 1;
@@ -121,12 +121,14 @@ $map: (
   line-height: 1em;
 }
 
-.section_text {
-  font-weight: bold;
-  font-size: 50px;
-  color: $colorSectionText;
-  padding: 50px 0 0 0;
-  text-align: center;
+.section {
+  .section_text {
+    font-weight: bold;
+    font-size: 50px;
+    color: $colorSectionText;
+    padding: 50px 0 0 0;
+    text-align: center;
+  }
 }
 
 .section_text p {
@@ -150,38 +152,38 @@ $map: (
   width: 1110px;
   height: 330px;
   border-radius: 5px;
-}
 
-img {
-  width: 430px;
-  height: 280px;
-  margin-left: 20px;
-  align-self: center;
-  border-radius: 5px;
-}
+  img {
+    width: 430px;
+    height: 280px;
+    margin-left: 20px;
+    align-self: center;
+    border-radius: 5px;
+  }
 
-.section_card_right_container {
-  width: 500px;
-  padding: 0 90px 0 90px;
-}
+  .section_card_right_container {
+    width: 500px;
+    padding: 0 90px 0 90px;
+  }
 
-.section_card_heading {
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 65px 0 0 0;
-  text-align: center;
-}
+  .section_card_heading {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 65px 0 0 0;
+    text-align: center;
+  }
 
-.section_card_text {
-  color: white;
-  white-space: normal;
-  padding-top: 40px; 
-  line-height: 1.5;
-}
+  .section_card_text {
+    color: white;
+    white-space: normal;
+    padding-top: 40px;
+    line-height: 1.5;
+  }
 
-.section_link {
-  @include sectionLinks;
+  .section_link {
+    @include sectionLinks;
+  }
 }
 
 .section_banner {
@@ -194,42 +196,41 @@ img {
   z-index: 1;
   position: relative;
   color: #21232e;
-}
 
-.section_banner_text_wrap {
-  padding-top: 20px;
-  padding-left: 160px;
-}
+  .section_banner_text_wrap {
+    padding-top: 20px;
+    padding-left: 160px;
 
-.section_banner_heading {
-  font-size: 30px;
-  font-weight: bold;
-  color: $headerHeadingColor;
-}
+    .section_banner_heading {
+      font-size: 30px;
+      font-weight: bold;
+      color: $headerHeadingColor;
+    }
 
-.section_banner_text {
-  padding-top: 15px;
-  color: white;
-}
+    .section_banner_text {
+      padding-top: 15px;
+      color: white;
+    }
 
-.section_banner_heading p {
-  position: relative;
-}
+    .section_banner_heading p {
+      position: relative;
+    }
 
-.section_banner_heading:before {
-  content: map-get($map, start);
-  background-color: $bgColorBefore;
-  color: $colorBefore;
-  position: absolute;
-  top: 24px;
-  left: 282px;
-  line-height: 1em;
-}
-
-.section_banner_button {
-  @include buttons;
-  position: relative;
-  margin: 50px 0 0 330px;
+    .section_banner_heading:before {
+      content: map-get($map, start);
+      background-color: $bgColorBefore;
+      color: $colorBefore;
+      position: absolute;
+      top: 24px;
+      left: 282px;
+      line-height: 1em;
+    }
+  }
+  .section_banner_button {
+    @include buttons;
+    position: relative;
+    margin: 50px 0 0 330px;
+  }
 }
 
 .footer-wrap {
@@ -242,13 +243,13 @@ img {
   height: 240px;
   color: white;
   padding-top: 35px;
-}
 
-.footer_logo {
-  @extend .landing-logo;
-  color: white;
-}
+  .footer_logo {
+    @extend .landing-logo;
+    color: white;
+  }
 
-.footer_text {
-  width: 350px;
+  .footer_text {
+    width: 350px;
+  }
 }
