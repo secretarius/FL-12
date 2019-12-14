@@ -1,20 +1,21 @@
 * {
   margin: 0;
+  padding: 0;
   font-family: "Source Sans Pro", sans-serif; }
 
+body {
+  width: 1920px; }
+
 .header {
-  background-image: url(/homework/img/m-h-day.jpg);
+  background-image: url(/homework/img/m-h-night.jpg);
   background-attachment: fixed;
-  background-position: 100% 100%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom-right-radius: 50em 25em;
   width: 1920px;
   height: 655px;
   color: #21232e; }
-
-body {
-  width: 1920px; }
 
 .header-wrap {
   padding: 20px 0px 0px 150px;
@@ -24,26 +25,27 @@ body {
     padding-left: 150px;
     font-weight: bold; }
   .header-wrap .header_button {
-    float: left;
     border: none;
     color: white;
-    background-color: green;
+    background-color: #E3AC00;
     border-radius: 3px;
     width: 150px;
     height: 50px;
+    float: left;
     padding: 15px 25px; }
 
-.landing-logo {
-  display: flex; }
-  .landing-logo img {
+.landing-logo, .footer_logo {
+  display: flex;
+  align-items: center; }
+  .landing-logo img, .footer_logo img {
     height: 50px;
     width: 50px; }
-  .landing-logo p {
+  .landing-logo p, .footer_logo p {
     font-family: "Hind", sans-serif;
     font-size: 25px;
     font-weight: bold;
     padding: 0 0 0 15px; }
-  .landing-logo span {
+  .landing-logo span, .footer_logo span {
     display: block;
     font-size: 10px;
     text-align: center; }
@@ -64,7 +66,7 @@ body {
 
 .header_heading:before {
   content: "awesome";
-  background-color: #30d5c8;
+  background-color: #FF4E33;
   color: black;
   position: absolute;
   top: 234px;
@@ -83,7 +85,7 @@ body {
 
 .section_text:before {
   content: "adventure";
-  background-color: #30d5c8;
+  background-color: #FF4E33;
   color: black;
   position: absolute;
   top: 711px;
@@ -130,7 +132,7 @@ img {
   padding: 40px 0 0 0; }
 
 .section_banner {
-  background-image: linear-gradient(to right, #62911b 0%, #00935d, #3160c6 100%);
+  background-image: linear-gradient(to right, #e3ac00 0%, #ff4e33 100%);
   width: 1200px;
   display: flex;
   margin: 125px 355px -70px 362px;
@@ -157,7 +159,7 @@ img {
 
 .section_banner_heading:before {
   content: "start";
-  background-color: #30d5c8;
+  background-color: #FF4E33;
   color: black;
   position: absolute;
   top: 24px;
@@ -165,24 +167,26 @@ img {
   line-height: 1em; }
 
 .section_banner_button {
-  float: left;
   border: none;
   color: white;
-  background-color: green;
+  background-color: #E3AC00;
   border-radius: 3px;
   width: 150px;
   height: 50px;
-  padding: 15px 25px;
   position: relative;
-  margin-left: 330px;
-  margin-top: 50px; }
+  margin: 50px 0 0 330px; }
 
 .footer-wrap {
+  font-family: "Hind", sans-serif;
   background-color: #21232e;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 1920px;
-  height: 240px; }
+  height: 240px;
+  color: white; }
+
+.footer_logo {
+  color: white; }
 
 /*# sourceMappingURL=style2.css.map */

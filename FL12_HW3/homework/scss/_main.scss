@@ -1,34 +1,50 @@
-// Write your styles here
 * {
   margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  padding: 0;
+  font-family: $fontFamilySans;
+}
+
+body {
+  width: $widthPage;
 }
 
 @mixin buttons {
-  float: left;
   border: none;
   color: white;
-  background-color: green;
+  background-color: $btnBgColor;
   border-radius: 3px;
   width: 150px;
   height: 50px;
-  padding: 15px 25px;
 }
 
-@mixin links {
+@mixin sectionLinks {
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+  padding: 40px 0 0 0;
+}
+
+@mixin forLogin {
   color: white;
   padding-left: 150px;
   font-weight: bold;
 }
 
+$map: (
+    awesome: 'awesome',
+    adventure: 'adventure',
+    start: 'start'
+);
+
 .header {
-  background-image: url(/homework/img/m-h-day.jpg);
+  background-image: $header-img;
   background-attachment: fixed;
-  background-position: 100% 100%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom-right-radius: 50em 25em;
-  width: 1920px;
+  width: $widthPage;
   height: 655px;
   color: #21232e;
 }
@@ -37,17 +53,15 @@
 //    border-bottom-right-radius: 50em 17em;
 //    width: 850px;
 // }
-body {
-  width: 1920px;
-}
-
 .header-wrap {
   a {
-    @include links;
+    @include forLogin;
   }
 
   .header_button {
     @include buttons;
+    float: left;
+    padding: 15px 25px;
   }
 
   padding: 20px 0px 0px 150px;
@@ -56,6 +70,7 @@ body {
 
 .landing-logo {
   display: flex;
+  align-items: center;
 
   img {
     height: 50px;
@@ -63,7 +78,7 @@ body {
   }
 
   p {
-    font-family: "Hind", sans-serif;
+    font-family: $fontFamilyHind;
     font-size: 25px;
     font-weight: bold;
     padding: 0 0 0 15px;
@@ -94,8 +109,8 @@ body {
 }
 
 .header_heading:before {
-  content: "awesome";
-  background-color: #30d5c8;
+  content: map-get($map, awesome);
+  background-color: $bgColorBefore;
   color: black;
   position: absolute;
   top: 234px;
@@ -116,8 +131,8 @@ body {
 }
 
 .section_text:before {
-  content: "adventure";
-  background-color: #30d5c8;
+  content: map-get($map, adventure);
+  background-color: $bgColorBefore;
   color: black;
   position: absolute;
   top: 711px;
@@ -163,15 +178,11 @@ img {
 }
 
 .section_link {
-  color: white;
-  display: block;
-  text-align: center;
-  line-height: 1.5;
-  padding: 40px 0 0 0;
+  @include sectionLinks;
 }
 
 .section_banner {
-  background-image: linear-gradient(to right, #62911b 0%, #00935d,  #3160c6 100%);
+  background-image: $linGrColor;
   width: 1200px;
   display: flex;
   margin: 125px 355px -70px 362px;
@@ -202,8 +213,8 @@ img {
 }
 
 .section_banner_heading:before {
-  content: "start";
-  background-color: #30d5c8;
+  content: map-get($map, start);
+  background-color: $bgColorBefore;
   color: black;
   position: absolute;
   top: 24px;
@@ -214,15 +225,21 @@ img {
 .section_banner_button {
   @include buttons;
   position: relative;
-  margin-left: 330px;
-  margin-top: 50px;
+  margin: 50px 0 0 330px;
 }
 
 .footer-wrap {
+  font-family: $fontFamilyHind;
   background-color: #21232e;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 1920px;
+  width: $widthPage;
   height: 240px;
+  color: white;
+}
+
+.footer_logo {
+  @extend .landing-logo;
+  color: white;
 }
