@@ -60,196 +60,187 @@ $map: (
 body {
   width: $widthPage;
   background-color: $bGColor;
-}
 
-.header {
-  background-image: $header-img;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom-right-radius: 50em 25em;
-  width: $widthPage;
-  height: 655px;
-}
+  .header {
+    background-image: $headerImg;
+    background-attachment: fixed;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 50em 20em;
+    width: $widthPage;
+    height: 655px;
 
-// div .section_card_img {
-//    border-bottom-right-radius: 50em 17em;
-//    width: 850px;
-// }
-.header-wrap {
-  a {
-    @include forLogin;
+    .header-wrap {
+      padding: 20px 0px 0px 150px;
+      width: 630px;
+
+      .header_heading {
+        font-size: 80px;
+        line-height: 1;
+        font-weight: bold;
+        padding: 85px 0 0 0;
+        color: $headerHeadingColor;
+
+        &::before {
+          content: map-get($map, awesome);
+          background-color: $bgColorBefore;
+          color: $colorBefore;
+          position: absolute;
+          top: 234px;
+          left: 150px;
+          line-height: 1em;
+        }
+      }
+
+      .header_text {
+        padding: 45px 0 68px 0;
+        line-height: 1.5;
+        white-space: pre-line;
+        color: $headerHeadingColor;
+      }
+
+      .header_heading p {
+        position: relative;
+      }
+
+      .login {
+        @include forLogin;
+      }
+
+      .header_button {
+        @include buttons;
+        float: left;
+        padding: 15px 25px;
+      }
+    }
   }
 
-  .header_button {
-    @include buttons;
-    float: left;
-    padding: 15px 25px;
-  }
-
-  padding: 20px 0px 0px 150px;
-  width: 630px;
-}
-
-.header_heading {
-  font-size: 80px;
-  line-height: 1;
-  font-weight: bold;
-  padding: 85px 0 0 0;
-  color: $headerHeadingColor;
-}
-
-.header_text {
-  padding: 45px 0 68px 0;
-  line-height: 1.5;
-  white-space: pre-line;
-  color: $headerHeadingColor;
-}
-
-.header_heading p {
-  position: relative;
-}
-
-.header_heading:before {
-  content: map-get($map, awesome);
-  background-color: $bgColorBefore;
-  color: $colorBefore;
-  position: absolute;
-  top: 234px;
-  left: 150px;
-  line-height: 1em;
-}
-
-.section {
-  .section_text {
-    font-weight: bold;
-    font-size: 50px;
-    color: $colorSectionText;
-    padding: 50px 0 0 0;
-    text-align: center;
-  }
-}
-
-.section_text p {
-  position: relative;
-}
-
-.section_text:before {
-  content: map-get($map, adventure);
-  background-color: $bgColorBefore;
-  color: $colorBefore;
-  position: absolute;
-  top: 711px;
-  left: 970px;
-  line-height: 1em;
-}
-
-.section_card {
-  display: flex;
-  background-color: $sectionCardColor;
-  margin: 20px auto;
-  width: 1110px;
-  height: 330px;
-  border-radius: 5px;
-
-  img {
-    width: 430px;
-    height: 280px;
-    margin-left: 20px;
-    align-self: center;
-    border-radius: 5px;
-  }
-
-  .section_card_right_container {
-    width: 500px;
-    padding: 0 90px 0 90px;
-  }
-
-  .section_card_heading {
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 65px 0 0 0;
-    text-align: center;
-  }
-
-  .section_card_text {
-    color: white;
-    white-space: normal;
-    padding-top: 40px;
-    line-height: 1.5;
-  }
-
-  .section_link {
-    @include sectionLinks;
-  }
-}
-
-.section_banner {
-  background-image: $linGrColor;
-  width: 1200px;
-  display: flex;
-  margin: 125px 355px -70px 362px;
-  height: 150px;
-  border-radius: 5px;
-  z-index: 1;
-  position: relative;
-  color: #21232e;
-
-  .section_banner_text_wrap {
-    padding-top: 20px;
-    padding-left: 160px;
-
-    .section_banner_heading {
-      font-size: 30px;
+  .section {
+    .section_text {
       font-weight: bold;
-      color: $headerHeadingColor;
+      font-size: 50px;
+      color: $colorSectionText;
+      padding: 50px 0 0 0;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        content: map-get($map, adventure);
+        background-color: $bgColorBefore;
+        color: $colorBefore;
+        position: absolute;
+        top: 58px;
+        left: 970px;
+        line-height: 1em;
+      }
     }
 
-    .section_banner_text {
-      padding-top: 15px;
+    .section_card {
+      display: flex;
+      background-color: $sectionCardColor;
+      margin: 20px auto;
+      width: 1110px;
+      height: 330px;
+      border-radius: 5px;
+
+      img {
+        width: 430px;
+        height: 280px;
+        margin-left: 20px;
+        align-self: center;
+        border-radius: 5px;
+      }
+
+      .section_card_right_container {
+        width: 500px;
+        padding: 0 90px 0 90px;
+
+        .section_card_heading {
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          padding: 65px 0 0 0;
+          text-align: center;
+        }
+
+        .section_card_text {
+          color: white;
+          white-space: normal;
+          padding-top: 40px;
+          line-height: 1.5;
+        }
+
+        .section_link {
+          @include sectionLinks;
+        }
+      }
+    }
+  }
+
+  .section_banner {
+    background-image: $linGrColor;
+    width: 1200px;
+    display: flex;
+    margin: 125px 355px -70px 362px;
+    height: 150px;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+    color: #21232e;
+
+    .section_banner_text_wrap {
+      padding-top: 20px;
+      padding-left: 160px;
+
+      .section_banner_heading {
+        font-size: 30px;
+        font-weight: bold;
+        color: $headerHeadingColor;
+        position: relative;
+
+        &::before {
+          content: map-get($map, start);
+          background-color: $bgColorBefore;
+          color: $colorBefore;
+          position: absolute;
+          top: 4px;
+          left: 122px;
+          line-height: 1em;
+        }
+      }
+
+      .section_banner_text {
+        padding-top: 15px;
+        color: white;
+      }
+    }
+
+    .section_banner_button {
+      @include buttons;
+      position: relative;
+      margin: 50px 0 0 330px;
+    }
+  }
+
+  .footer-wrap {
+    font-family: $fontFamilyHind;
+    background-color: $footerBgColor;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: $widthPage;
+    height: 240px;
+    color: white;
+    padding-top: 35px;
+
+    .footer_logo {
+      @extend .landing-logo;
       color: white;
     }
 
-    .section_banner_heading p {
-      position: relative;
+    .footer_text {
+      width: 350px;
     }
-
-    .section_banner_heading:before {
-      content: map-get($map, start);
-      background-color: $bgColorBefore;
-      color: $colorBefore;
-      position: absolute;
-      top: 24px;
-      left: 282px;
-      line-height: 1em;
-    }
-  }
-  .section_banner_button {
-    @include buttons;
-    position: relative;
-    margin: 50px 0 0 330px;
-  }
-}
-
-.footer-wrap {
-  font-family: $fontFamilyHind;
-  background-color: $footerBgColor;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: $widthPage;
-  height: 240px;
-  color: white;
-  padding-top: 35px;
-
-  .footer_logo {
-    @extend .landing-logo;
-    color: white;
-  }
-
-  .footer_text {
-    width: 350px;
   }
 }

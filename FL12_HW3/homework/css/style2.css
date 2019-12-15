@@ -3,19 +3,19 @@
   padding: 0;
   font-family: "Source Sans Pro", sans-serif; }
 
-.landing-logo, .footer-wrap .footer_logo {
+.landing-logo, body .footer-wrap .footer_logo {
   display: flex;
   align-items: center;
   color: white; }
-  .landing-logo img, .footer-wrap .footer_logo img {
+  .landing-logo img, body .footer-wrap .footer_logo img {
     height: 50px;
     width: 50px; }
-  .landing-logo p, .footer-wrap .footer_logo p {
+  .landing-logo p, body .footer-wrap .footer_logo p {
     font-family: "Hind", sans-serif;
     font-size: 25px;
     font-weight: bold;
     padding: 0 0 0 15px; }
-  .landing-logo span, .footer-wrap .footer_logo span {
+  .landing-logo span, body .footer-wrap .footer_logo span {
     display: block;
     font-size: 10px;
     text-align: center; }
@@ -23,165 +23,151 @@
 body {
   width: 1920px;
   background-color: #21232e; }
-
-.header {
-  background-image: url(/homework/img/m-h-night.jpg);
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom-right-radius: 50em 25em;
-  width: 1920px;
-  height: 655px; }
-
-.header-wrap {
-  padding: 20px 0px 0px 150px;
-  width: 630px; }
-  .header-wrap a {
-    color: white;
-    padding-left: 150px;
-    font-weight: bold; }
-  .header-wrap .header_button {
-    border: none;
-    color: white;
-    background-color: #E3AC00;
-    border-radius: 3px;
-    width: 150px;
-    height: 50px;
-    float: left;
-    padding: 15px 25px; }
-
-.header_heading {
-  font-size: 80px;
-  line-height: 1;
-  font-weight: bold;
-  padding: 85px 0 0 0;
-  color: white; }
-
-.header_text {
-  padding: 45px 0 68px 0;
-  line-height: 1.5;
-  white-space: pre-line;
-  color: white; }
-
-.header_heading p {
-  position: relative; }
-
-.header_heading:before {
-  content: "awesome";
-  background-color: #FF4E33;
-  color: white;
-  position: absolute;
-  top: 234px;
-  left: 150px;
-  line-height: 1em; }
-
-.section .section_text {
-  font-weight: bold;
-  font-size: 50px;
-  color: white;
-  padding: 50px 0 0 0;
-  text-align: center; }
-
-.section_text p {
-  position: relative; }
-
-.section_text:before {
-  content: "adventure";
-  background-color: #FF4E33;
-  color: white;
-  position: absolute;
-  top: 711px;
-  left: 970px;
-  line-height: 1em; }
-
-.section_card {
-  display: flex;
-  background-color: #3b3f50;
-  margin: 20px auto;
-  width: 1110px;
-  height: 330px;
-  border-radius: 5px; }
-  .section_card img {
-    width: 430px;
-    height: 280px;
-    margin-left: 20px;
-    align-self: center;
-    border-radius: 5px; }
-  .section_card .section_card_right_container {
-    width: 500px;
-    padding: 0 90px 0 90px; }
-  .section_card .section_card_heading {
-    color: white;
+  body .header {
+    background-image: url(/homework/img/m-h-night.jpg);
+    background-attachment: fixed;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 50em 20em;
+    width: 1920px;
+    height: 655px; }
+    body .header .header-wrap {
+      padding: 20px 0px 0px 150px;
+      width: 630px; }
+      body .header .header-wrap .header_heading {
+        font-size: 80px;
+        line-height: 1;
+        font-weight: bold;
+        padding: 85px 0 0 0;
+        color: white; }
+        body .header .header-wrap .header_heading::before {
+          content: "awesome";
+          background-color: #FF4E33;
+          color: white;
+          position: absolute;
+          top: 234px;
+          left: 150px;
+          line-height: 1em; }
+      body .header .header-wrap .header_text {
+        padding: 45px 0 68px 0;
+        line-height: 1.5;
+        white-space: pre-line;
+        color: white; }
+      body .header .header-wrap .header_heading p {
+        position: relative; }
+      body .header .header-wrap .login {
+        color: white;
+        padding-left: 150px;
+        font-weight: bold; }
+      body .header .header-wrap .header_button {
+        border: none;
+        color: white;
+        background-color: #E3AC00;
+        border-radius: 3px;
+        width: 150px;
+        height: 50px;
+        float: left;
+        padding: 15px 25px; }
+  body .section .section_text {
     font-weight: bold;
-    font-size: 20px;
-    padding: 65px 0 0 0;
-    text-align: center; }
-  .section_card .section_card_text {
+    font-size: 50px;
     color: white;
-    white-space: normal;
-    padding-top: 40px;
-    line-height: 1.5; }
-  .section_card .section_link {
-    color: white;
-    display: block;
+    padding: 50px 0 0 0;
     text-align: center;
-    line-height: 1.5;
-    padding: 40px 0 0 0; }
-
-.section_banner {
-  background-image: linear-gradient(to right, #e3ac00 0%, #ff4e33 100%);
-  width: 1200px;
-  display: flex;
-  margin: 125px 355px -70px 362px;
-  height: 150px;
-  border-radius: 5px;
-  z-index: 1;
-  position: relative;
-  color: #21232e; }
-  .section_banner .section_banner_text_wrap {
-    padding-top: 20px;
-    padding-left: 160px; }
-    .section_banner .section_banner_text_wrap .section_banner_heading {
-      font-size: 30px;
-      font-weight: bold;
-      color: white; }
-    .section_banner .section_banner_text_wrap .section_banner_text {
-      padding-top: 15px;
-      color: white; }
-    .section_banner .section_banner_text_wrap .section_banner_heading p {
-      position: relative; }
-    .section_banner .section_banner_text_wrap .section_banner_heading:before {
-      content: "start";
+    position: relative; }
+    body .section .section_text::before {
+      content: "adventure";
       background-color: #FF4E33;
       color: white;
       position: absolute;
-      top: 24px;
-      left: 282px;
+      top: 58px;
+      left: 970px;
       line-height: 1em; }
-  .section_banner .section_banner_button {
-    border: none;
-    color: white;
-    background-color: #E3AC00;
-    border-radius: 3px;
-    width: 150px;
-    height: 50px;
+  body .section .section_card {
+    display: flex;
+    background-color: #3b3f50;
+    margin: 20px auto;
+    width: 1110px;
+    height: 330px;
+    border-radius: 5px; }
+    body .section .section_card img {
+      width: 430px;
+      height: 280px;
+      margin-left: 20px;
+      align-self: center;
+      border-radius: 5px; }
+    body .section .section_card .section_card_right_container {
+      width: 500px;
+      padding: 0 90px 0 90px; }
+      body .section .section_card .section_card_right_container .section_card_heading {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 65px 0 0 0;
+        text-align: center; }
+      body .section .section_card .section_card_right_container .section_card_text {
+        color: white;
+        white-space: normal;
+        padding-top: 40px;
+        line-height: 1.5; }
+      body .section .section_card .section_card_right_container .section_link {
+        color: white;
+        display: block;
+        text-align: center;
+        line-height: 1.5;
+        padding: 40px 0 0 0; }
+  body .section_banner {
+    background-image: linear-gradient(to right, #e3ac00 0%, #98354D 100%);
+    width: 1200px;
+    display: flex;
+    margin: 125px 355px -70px 362px;
+    height: 150px;
+    border-radius: 5px;
+    z-index: 1;
     position: relative;
-    margin: 50px 0 0 330px; }
-
-.footer-wrap {
-  font-family: "Hind", sans-serif;
-  background-color: #3b3f50;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 1920px;
-  height: 240px;
-  color: white;
-  padding-top: 35px; }
-  .footer-wrap .footer_logo {
-    color: white; }
-  .footer-wrap .footer_text {
-    width: 350px; }
+    color: #21232e; }
+    body .section_banner .section_banner_text_wrap {
+      padding-top: 20px;
+      padding-left: 160px; }
+      body .section_banner .section_banner_text_wrap .section_banner_heading {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        position: relative; }
+        body .section_banner .section_banner_text_wrap .section_banner_heading::before {
+          content: "start";
+          background-color: #FF4E33;
+          color: white;
+          position: absolute;
+          top: 4px;
+          left: 122px;
+          line-height: 1em; }
+      body .section_banner .section_banner_text_wrap .section_banner_text {
+        padding-top: 15px;
+        color: white; }
+    body .section_banner .section_banner_button {
+      border: none;
+      color: white;
+      background-color: #E3AC00;
+      border-radius: 3px;
+      width: 150px;
+      height: 50px;
+      position: relative;
+      margin: 50px 0 0 330px; }
+  body .footer-wrap {
+    font-family: "Hind", sans-serif;
+    background-color: #3b3f50;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1920px;
+    height: 240px;
+    color: white;
+    padding-top: 35px; }
+    body .footer-wrap .footer_logo {
+      color: white; }
+    body .footer-wrap .footer_text {
+      width: 350px; }
 
 /*# sourceMappingURL=style2.css.map */
