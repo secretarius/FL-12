@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  height: 100%;
+
+  /* font-family: "Source Sans Pro", sans-serif; */
+}
+
+header .main-header-container {
+  background-color: white;
+}
+
+header .main-header-title {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}
+
+header .menu {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 350px;
+}
+
+header .menu li {
+  list-style-type: none;
+}
+
+header .menu li a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+header .menu li a:hover {
+  color: #dfd9b0;
+}
+
+header nav {
+  display: flex;
+}
+
+header nav .main-header-title {
+  margin: 24px 450px;
+}
+
+header nav .menu {
+  align-items: center;
+  flex: 1;
+}
+
+header .banner {
+  background-image: url(/homework/img/home-bg.jpg);
+  /* background-position: center; */
+  background-size: cover;
+  min-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+header .banner h1 {
+  color: white;
+  font-size: 75px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+header .banner p {
+  color: yellow;
+  font-size: 18px;
+  text-align: center;
+}
+
+header .banner .button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  background-color: white;
+  margin-top: 25px;
+  border-radius: 40px;
+  border: 0;
+  height: 50px;
+  width: 160px;
+  font-weight: bold;
+}
+
