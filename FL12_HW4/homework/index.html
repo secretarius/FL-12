@@ -9,13 +9,6 @@
       rel="stylesheet"
     />
     <title>Front-End Lab</title>
-    <style>
-        .round {
-         border-radius: 100px; /* Радиус скругления */
-         width: 45px;
-         height: 45px;
-        }
-       </style>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -40,64 +33,63 @@
         </nav>
       </div>
       <div class="banner">
-          <div>
-             <h1 class="banner_heading">Hello! This is Front-end Lab.</h1> 
-             <p class="banner_text">EPAM Front-end Lab</p>
-             <div class="button-container">
-              <button class="button">DISCOVER MORE</button>
-            </div>
-          </div> 
-      </div>
-</header>
-    <main class="container">
-      <div class="section_card_wrap">
-        <div class="section_card">
-          <img
-            class="section_card_img"
-            src="img/blog-image1.jpg"
-            alt="experts"
-          />
-          <div class="section_card_right_container">
-            <p class="section_card_heading">
-              We Help You To Make Front-end Great Again
-            </p>
-            <p class="section_card_blog_inf">
-                <img src="img/author-image1.jpg" alt="" class="round">
-                <span>Jen Lopez</span>
-                <span>June 10, 2017</span>
-                <span>48 Comments</span>
-            </p>
-
-            <p class="section_card_text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
-            </p>
-            <div>
-              <button class="header_button">Continue Reading</button>
-            </div>
+        <div>
+          <h1 class="banner-heading">Hello! This is Front-end Lab.</h1>
+          <p class="banner-text">EPAM Front-end Lab</p>
+          <div class="button-container">
+            <button class="button">DISCOVER MORE</button>
           </div>
         </div>
       </div>
-    </main>
-    <footer class="main-footer">
-        <div class="container">
-          <section class="footer-contacts">
-              <p class="footer_heading">Talk to us</p>
-            512 Delicious Street, San Francisco, CA 10880
-010-020-0990
-info@company.com
-          </section>
-          <section></section>
-          <p class="footer_heading2">EPAM LAB</p>
-          <p class="footer_text">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    </header>
+    <main class="section-container">
+      <div class="section-card">
+        <img
+          class="section-card-img"
+          src="img/blog-image1.jpg"
+          alt="image from blog"
+        />
+        <h1>We Help You To Make Front-end Great Again</h1>
+        <div class="section-card-info">
+          <img
+            class="photo-account"
+            src="img/author-image1.jpg"
+            alt="author-image"
+          />
+          <p class="name">Jen Lopez</p>
+          <p class="date-publication">June 10, 2017</p>
+          <p class="comment-amount">48 Comments</p>
+        </div>
+        <p class="section-card-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
         </p>
-        <span class="footer-copyright">
-            Copyright  &copy; 2019 EPAM
-        </span>
+        <button class="section-btn">Continue Reading</button>
+      </div>
+      <hr />
+    </main>
+    <footer>
+        <section class="footer-container">
+      <div class="footer-copyright">
+        <h1>EPAM LAB</h1>
+        <p class="footer-text">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua.
+        </p>
+        <p>Copyright &copy; 2019 EPAM</p>
+      </div>
+      <div class="footer-contacts">
+        <h1>Talk to us</h1>
+        <p>512 Delicious Street, San Francisco, CA 10880</p>
+        <p>010-020-0990</p>
+        <p>info@company.com</p>
+      </div>
+    </section>
+    </footer>
   </body>
 </html>
