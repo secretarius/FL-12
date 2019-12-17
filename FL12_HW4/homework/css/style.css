@@ -1,12 +1,10 @@
 body {
   margin: 0;
   height: 100%;
-
-  /* font-family: "Source Sans Pro", sans-serif; */
 }
 
 header .main-header-container {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 header .main-header-title {
@@ -14,12 +12,12 @@ header .main-header-title {
   text-align: center;
   margin: 0;
   font-weight: bold;
+  color: #777777
 }
 
 header .menu {
   display: flex;
-  justify-content: space-between;
-  padding-right: 350px;
+  justify-content: space-around;
 }
 
 header .menu li {
@@ -28,13 +26,14 @@ header .menu li {
 
 header .menu li a {
   text-decoration: none;
-  color: black;
+  color: #777777;
   letter-spacing: 1px;
   font-size: 18px;
+  padding-left: 40px;
 }
 
 header .menu li a:hover {
-  color: #dfd9b0;
+  color: #bfba55;
 }
 
 header nav {
@@ -42,12 +41,12 @@ header nav {
 }
 
 header nav .main-header-title {
-  margin: 24px 450px;
+  margin: 24px 265px;
 }
 
 header nav .menu {
   align-items: center;
-  flex: 1;
+  flex: 0;
 }
 
 header .banner {
@@ -62,14 +61,14 @@ header .banner {
 }
 
 header .banner h1 {
-  color: white;
+  color:  #ffffff;
   font-size: 75px;
   margin-bottom: 0;
   text-align: center;
 }
 
 header .banner p {
-  color: yellow;
+  color: #bfba55;
   font-size: 18px;
   text-align: center;
 }
@@ -81,10 +80,10 @@ header .banner .button-container {
 }
 
 .button {
-  color: black;
+  color: #777;
   font-size: 12px;
   text-align: center;
-  background-color: white;
+  background-color: #ffffff;
   margin-top: 25px;
   border-radius: 40px;
   outline: none;
@@ -93,11 +92,6 @@ header .banner .button-container {
   height: 50px;
   width: 160px;
   font-weight: bold;
-}
-
-.button:hover {
-    background-color: gold;
-    color: white;
 }
 
 .section-container {
@@ -121,7 +115,7 @@ header .banner .button-container {
 .section-card-info p {
     font-size: 18px;
     padding-left: 20px;
-    color: gray;
+    color: #555;
 }
 
 .section-card-info .photo-account {
@@ -134,14 +128,14 @@ header .banner .button-container {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 35px;
-    color: gray;
+    color: #555;
 }
 
 .section-btn {
-  color: black;
+  color: #555;
   font-size: 15px;
   text-align: center;
-  background-color: white;
+  background-color: #ffffff;
   margin-bottom: 50px;
   border-radius: 30px;
   border: 1px solid gray;
@@ -159,8 +153,8 @@ hr {
 
 footer {
     height: 400px;
-    color: white;
-    background-color: black;
+    color: #ffffff;
+    background-color: #000;
 }
 
 .footer-container {
@@ -177,5 +171,5 @@ footer {
 }
 
 .footer-container p {
-    color: gray;
+    color: #777;
 }
