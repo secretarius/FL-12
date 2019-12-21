@@ -14,10 +14,10 @@ if (a === 0 && b === 0 && c === 0) {
 } else if (disc > 0) {
   const x1 = (-b + Math.sqrt(disc)) / (magicTwo * a);
   const x2 = (-b - Math.sqrt(disc)) / (magicTwo * a);
-  console.log(`x1 = ${x1} and x2 = ${x2}`);
+  console.log(`x1 = ${Math.round(x1)} and x2 = ${Math.round(x2)}`);
 } else if (disc === 0) {
   const x = -b / (magicTwo * a);
-  console.log(`x = ${x}`);
+  console.log(`x = ${Math.round(x)}`);
 } else if (disc < 0) {
   console.log('no solution');
 }
