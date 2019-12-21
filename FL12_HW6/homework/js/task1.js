@@ -10,7 +10,7 @@ const squareDisc = Math.sqrt(disc);
 if (a === 0 && b === 0 && c === 0) {
   console.log('Invalid input data');
 } else if (isNaN(a) || isNaN(b) || isNaN(c)) {
-    console.log('Invalid input data');
+  console.log('Invalid input data');
 } else if (disc > 0) {
   const x1 = (-b + Math.sqrt(disc)) / (magicTwo * a);
   const x2 = (-b - Math.sqrt(disc)) / (magicTwo * a);
