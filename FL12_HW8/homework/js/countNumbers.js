@@ -2,7 +2,6 @@ function countNumbers(str) {
   let arr = str.split('');
   let res = {};
   let output = [];
-  // let count;
 
   for (let i = 0; i < arr.length; i++) {
     if (!isNaN(arr[i])) {
