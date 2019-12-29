@@ -187,7 +187,7 @@ section::before,
     text-transform: uppercase;
   }
 
-  .heading .padding-medium h2{
+  .heading .padding-medium h2 {
     font-weight: unset;
   }
 

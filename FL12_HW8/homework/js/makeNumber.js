@@ -1,14 +1,15 @@
 function makeNumber(str) {
-    let numEl = '';
+  let arr = str.split('');
+  let output = [];
 
-    for(let idx in str) {
-        if(parseInt(str[idx])) {
-            numEl += str[idx];
-        } 
+  for (let i = 0; i < arr.length; i++) {
+    if (!isNaN(arr[i])) {
+      output.push(arr[i]);
     }
-    return parseInt(numEl);
+  }
+  return output.join('');
 }
 
-// makeNumber('erer384jjjfd123');
-// makeNumber('123098h76gfdd');
-console.log(makeNumber('ijifjgdj'));
+makeNumber('erer384jjjfd123');
+makeNumber('123098h76gfdd');
+makeNumber('ijifjgdj');
