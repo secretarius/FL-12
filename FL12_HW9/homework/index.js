@@ -81,12 +81,65 @@ const actors = [
     { name: 'lee', age: 28 }
 ];
 
-function getArrayOfKeys(arr, callback, thisArg) {
-        for(let i = 0; i < arr.length; i++) {
-            callback.call(thisArg, arr[i]);
-        }  
+// function getArrayOfKeys(arr, callback, thisArg) {
+//         for(let i = 0; i < arr.length; i++) {
+//             callback.call(thisArg, arr[i]);
+//         }  
 
-
+  function getArrayOfKeys(array, key) {
+    let output = [];
+    for(let i = 0; i < array.length; i++) {
+        if(array.hasOwnProperty(i)){
+        let object = array[i];
+        output.push(object[key]);
+        }
+    }  
+    return output;
+    
 }
 
-  getArrayOfKeys(actors, 'name'); // ['tommy', 'lee']
+console.log(getArrayOfKeys(actors, 'name')); // ['tommy', 'lee']
+
+
+
+const thirty = 30;
+function substitute(arr) {
+    let res = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < thirty) {
+            res.push('*')
+        } else {
+            res.push(arr[i])
+        }
+    }  
+    return res;
+}
+
+console.log(substitute([58, 14, 48, 2, 31, 29])); // [58, '*', 48, '*', 31, '*']
+
+
+
+
+const date = new Date(2019, 0, 2); 
+
+function getPastDay(date, minus) {
+
+    let min = minus;
+    let dayAgo = new Date(date.getTime()-1);
+    dayAgo.setDate(date.getDate()-min);
+
+    return dayAgo.getDate();
+}
+
+console.log(getPastDay(date, 1)); // 1, (1 Jan 2019)
+console.log(getPastDay(date, 2)); // 31, (31 Dec 2018)
+console.log(getPastDay(date, 365)); // 2, (2 Jan 2018)
+
+
+function formatDate(data) {
+    let day = new Date(data.getTime());
+    return day.toLocaleString().slice(0, 15).replace(/-/g,'/');
+}
+
+console.log(formatDate(new Date('6/15/2018 09:15:00'))); // "2018/6/15 09:15"
+console.log(formatDate(new Date())); // "2020/1/7 12:56" // gets current local time
