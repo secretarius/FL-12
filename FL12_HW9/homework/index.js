@@ -4,7 +4,14 @@ const c = 8;
 const d = 7;
 const e = 2;
 const f = 3;
-const y = 2019;
+const g = 58;
+const h = 14;
+const i = 48;
+const j = 31;
+const k = 29;
+const l = 0;
+const m = 1;
+const year = 2019;
 const days = 365;
 
 function convert(...args) {
@@ -97,24 +104,20 @@ const actors = [
   function getArrayOfKeys(array, key) {
     let output = [];
     for(let i = 0; i < array.length; i++) {
-        if(array.hasOwnProperty(i)){
-        let object = array[i];
-        output.push(object[key]);
+        output.push(array[i][key]);
         }
-    }  
     return output;
     
 }
-
-console.log(getArrayOfKeys(actors, 'name')); // ['tommy', 'lee']
-
+getArrayOfKeys(actors, 'name'); // ['tommy', 'lee']
 
 
-const thirty = 30;
+
+const minNumb = 30;
 function substitute(arr) {
     let res = [];
     for(let i = 0; i < arr.length; i++) {
-        if(arr[i] < thirty) {
+        if(arr[i] < minNumb) {
             res.push('*')
         } else {
             res.push(arr[i])
@@ -123,30 +126,36 @@ function substitute(arr) {
     return res;
 }
 
-console.log(substitute([58, 14, 48, 2, 31, 29])); // [58, '*', 48, '*', 31, '*']
+console.log(substitute([g, h, i, a, j, k])); // [58, '*', 48, '*', 31, '*']
 
 
 
+const date = new Date(year, l, a); 
 
-const date = new Date(2019, 0, 2); 
-
-function getPastDay(date, minus) {
-
-    let min = minus;
-    let dayAgo = new Date(date.getTime()-1);
-    dayAgo.setDate(date.getDate()-min);
-
+function getPastDay(date, days) {
+    let dayAgo = new Date(date.getTime());
+    dayAgo.setDate(dayAgo.getDate()-days);
     return dayAgo.getDate();
 }
 
-console.log(getPastDay(date, 1)); // 1, (1 Jan 2019)
-console.log(getPastDay(date, 2)); // 31, (31 Dec 2018)
-console.log(getPastDay(date, 365)); // 2, (2 Jan 2018)
+console.log(getPastDay(date, m)); // 1, (1 Jan 2019)
+console.log(getPastDay(date, a)); // 31, (31 Dec 2018)
+console.log(getPastDay(date, days)); // 2, (2 Jan 2018)
 
 
-function formatDate(data) {
-    let day = new Date(data.getTime());
-    return day.toLocaleString().slice(0, 15).replace(/-/g,'/');
+
+function formatDate(date) {
+    const min = date.getMinutes();
+    const hours = date.getHours();
+    const day = date.getDate();
+    const month = date.getMonth();
+    const fullYear = date.getFullYear();
+    const twoChar = 10;
+    return (
+      `${fullYear}/${month + 1}/${day} ` +
+      `${hours < twoChar ? '0' : ''}${hours}:` +
+      `${min < twoChar ? '0' : ''}${min}`
+    );
 }
 
 console.log(formatDate(new Date('6/15/2018 09:15:00'))); // "2018/6/15 09:15"
