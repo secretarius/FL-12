@@ -1,4 +1,12 @@
-// Your code goes here
+const a = 2;
+const b = 3;
+const c = 8;
+const d = 7;
+const e = 2;
+const f = 3;
+const y = 2019;
+const days = 365;
+
 function convert(...args) {
   let arg = [...args];
   let newArg = [];
@@ -12,43 +20,47 @@ function convert(...args) {
   return newArg;
 }
 
-console.log(convert('1', 2, 3, '4')); //[1, '2', '3', 4]
+console.log(convert('1', a, b, '4')); //[1, '2', '3', 4]
 
 
 
 function executeforEach(arr, callback) {
-    for(let i = 0; i < arr.length; i++) {
-        callback(arr[i]);
+    for(let i of arr) {
+        callback(i);
     }  
 }
 
-executeforEach([1,2,3], function(el) {
-    console.log(el * 2)
+executeforEach([1,a,b], function(el) {
+    console.log(el * a);
 }); // logs 2 4 6
 
 
 
 
 function mapArray(arr, callback) {
-    for(let i = 0; i < arr.length; i++) {
-        callback(parseInt(arr[i]));
-    }  
+    let res = [];
+    executeforEach(arr, (item) => res.push(callback(parseInt(item))));
+    return res;
 }
-
-mapArray([2, '5', 8], function(el) {
-    return el + 3
+  
+mapArray([a, '5', c], function(el) {
+   return el + b;
 }) // returns [5, 8, 11]
 
 
 
 function filterArray(arr, callback) {
-    for(let i = 0; i < arr.length; i++) {
-        callback(arr[i]);
-    }  
+    let res = [];
+    executeforEach(arr, item => {
+      if(callback(item)) { 
+        res.push(item);
+      }
+    });
+    return res; 
 }
 
-filterArray([2, 5, 8], function(el) {
-    return el % 2 === 0
+filterArray([a, b, c], function(el) {
+    return el % a === 0
 }) // returns [2, 8]
 
 
@@ -56,7 +68,7 @@ filterArray([2, 5, 8], function(el) {
 
 function flipOver(str) {
     let reversed = '';
-  for(let char of str){
+    for(let char of str){
     reversed = char + reversed;
   }
   return reversed;
@@ -66,14 +78,14 @@ flipOver('hey world') // 'dlrow yeh'
 
 
 
-function makeListFromRange(arra) {
+function makeListFromRange(array) {
     let res = [];
-    for(let i = arra[0]; i <=arra[1]; i++) {
+    for(let i = array[0]; i <= array[1]; i++) {
         res.push(i);
     } 
     return res;
 }
-makeListFromRange([2, 7]) // [2, 3, 4, 5, 6, 7]
+makeListFromRange([a, d]) // [2, 3, 4, 5, 6, 7]
 
 
 const actors = [
@@ -81,10 +93,6 @@ const actors = [
     { name: 'lee', age: 28 }
 ];
 
-// function getArrayOfKeys(arr, callback, thisArg) {
-//         for(let i = 0; i < arr.length; i++) {
-//             callback.call(thisArg, arr[i]);
-//         }  
 
   function getArrayOfKeys(array, key) {
     let output = [];
